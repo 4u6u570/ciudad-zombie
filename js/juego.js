@@ -132,6 +132,7 @@ Juego.capturarMovimiento = function(tecla) {
     de sus metodos  */
 
     /* COMPLETAR */
+   this.jugador.mover(movX,movY,tecla);
   }
 };
 
@@ -147,6 +148,7 @@ Juego.dibujar = function() {
   "Dibujante dibuja al jugador" */
 
   /* Completar */
+  Dibujante.dibujarEntidad(this.jugador);
 
   // Se recorren los obstaculos de la carretera pintandolos
   this.obstaculosCarretera.forEach(function(obstaculo) {
@@ -164,6 +166,7 @@ Juego.dibujar = function() {
   for (var i = 0; i < this.jugador.vidas; i++) {
     var x = tamanio * i
     Dibujante.dibujarRectangulo('red', x, 0, tamanio, 8);
+    
   }
 };
 
